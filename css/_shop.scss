@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+.shop {
+  padding-left: 15%;
+  padding-right: 15%; 
+  padding-top: 1630px;
+  padding-bottom: 375px;
+  position: relative;
+
+  @include screen-mq(md) {
+    padding-top: 1000px;
+  }
+
+  &-container {
+    text-align: right;
+
+    @include screen-mq(md) {
+      text-align: left;
+    }
+
+    .shop-text {
+      width: 50%;
+      margin-left: auto;
+
+      @include screen-mq(md) {
+        width: 80%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+  &-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+
+    @include screen-mq(md) {
+      display: block;
+    }
+  }
+
+  &-svg-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+
+    path {
+      fill: $cl3;
+    }
+  }
+}
+
+.shop-card {
+  margin-top: $space-content;
+  width: calc((100% - 40px) / 2);
+
+  // margin-left: auto;
+  text-align: right;
+
+  @include screen-mq(md) {
+    width: 100%;
+    text-align: left;
+  }
+
+  &-img {
+    width: 100%;
+  }
+
+  &-info {
+    margin-top: 32px;
+  }
+
+  &-title {
+    font-size: $fz2;
+    font-weight: bold;
+    @include screen-mq(md) {
+      font-size: $fzs2;
+    }
+  }
+
+  &-address {
+    margin-top: 32px;
+  }
+
+  &-tel {
+    margin-top: 16px;
+  }
+
+  &-web {
+    letter-spacing: 0.2rem;
+    margin-top: 32px;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    font-feature-settings: "palt";
+    // color: $cl3;
+
+    a {
+      border-radius: 30px;
+      background-color: $cl4;
+      padding: 1rem 3rem 1rem 2rem;
+      transition: all 0.2s;
+
+      &::before {
+        content: " ";
+        width: 5px;
+        height: 5px;
+        border-left: 3px solid $cl2;
+        border-bottom: 3px solid $cl2;
+        // background-color: $cl2;
+        border-radius: 1px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-15px, -50%) rotate(-135deg);
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        background-color: $cl3;
+        color: $cl1;
+
+        &::before {
+          border-left: 3px solid $cl1;
+          border-bottom: 3px solid $cl1;
+        }
+      }
+    }
+  }
+
+  &-fb {
+    outline: 1px solid red;
+    width: 30px;
+    // background-color: black;
+  } 
+}

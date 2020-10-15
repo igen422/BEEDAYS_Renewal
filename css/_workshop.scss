@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+.workshop {
+  width: 100%;
+  position: relative; 
+  top: -200px ;
+  background: $cl3;
+  color: $cl1;
+  // overflow: hidden;
+  // z-index: 150;
+  padding: 600px 0;
+
+  .sec-img3 {
+    outline: 10px solid red;
+    padding: 250px 0;
+    overflow: hidden;
+    position: relative;
+    // top: 280px;
+    right: 0;
+    width: 25%;
+    background: url(/img/test.jpeg) center/cover no-repeat;
+
+    @include screen-mq(md) {
+      // top: 0;
+      // bottom: -500px;
+      top: 1500px;
+      padding: 200px 0;
+
+      // left: 0;
+    }
+  }
+
+  .sec-img4 {
+    // ----height----
+    // $img3-height: 480px;
+    // height: $img3-height;
+    // min-height: $img3-height;
+    // --------------
+
+    // padding: 240px 0;
+    // position: absolute;
+    // top: 1000px;
+    // width: 60%;
+    background: url(/img/test.jpeg) center/cover no-repeat;
+
+    @include screen-mq(md) {
+      // top: 870px;
+      padding: 140px 0;
+    }
+  }
+}
+
+.workshop-wrapper {
+  outline: 1px solid blue;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  // left: 0;
+  // margin-right: 10%;
+  // width: 85%;
+  // color: #C4C2B6;
+  // color: #FBFAF5;
+  // color: rgba(151, 210, 202, 1 );
+
+  @include screen-mq(md) {
+    // width: 100%;
+    // padding-bottom: 1000px;
+  }
+
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   // background: $cl3;
+  //   position: absolute;
+  //   // top: -232px;
+  //   width: 100%;
+  //   // padding: 750px 0;
+  //   box-sizing: border-box;
+  //   z-index: -1;
+
+//     @include screen-mq(md) {
+//       padding: 1000px 0;
+//     }
+//   }
+}
+
+.workshop-container {
+  outline: 1px solid black;
+  text-align: left;
+  position: absolute;
+  left: 20%;
+  width: 40%;
+
+  @include screen-mq(md) {
+    // width: 60%;
+  }
+
+  .workshop-subtitle {
+    // font-size: $fz2;
+    // margin-top: $space-content;
+    @include screen-mq(md) {
+      // font-size: $fzs2;
+    }
+  }
+}
+
+.workshop-text {
+  display: flex;
+  flex-direction: column;
+
+  .ws-text1 {
+    font-weight: bold;
+    font-size: $fz2;
+  }
+
+  .ws-text2 {
+    margin-top: 32px;
+  }
+
+  .ws-text3 {
+    margin-top: 32px;
+  }
+}
+
+.workshop-sns {
+  .sns-text {
+    // outline: 1px solid red;
+    font-size: $fz2;
+    font-weight: bold;
+    text-align: center;
+
+    @include screen-mq(md) {
+      font-size: $fzs2;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 32px;
+
+    a {
+      outline: 1px solid red;
+      transform: translateX(0);
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    .sns-icon {
+      width: 40px;
+    }
+  }
+}

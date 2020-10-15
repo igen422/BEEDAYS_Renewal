@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+.hero {
+  position: relative;
+  padding-top: 13vh;
+
+  &-bg {
+    overflow: hidden;
+    outline: 1px solid red;
+
+    // ----height----
+    $bg-height: 85vh;
+    min-height: 460px;
+
+    @include screen-mq(md) {
+      $bg-height: 60vh;
+    }
+    height: $bg-height;
+    min-height: $bg-height;
+    // --------------
+    width: 60%;
+    margin-left: auto;
+    background: url(/img/hero.jpeg) right/cover no-repeat;
+    position: relative;
+
+    @include screen-mq(md) {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .hero-svg-wrapper {
+      width: 100%;
+      position: absolute;
+      bottom: -30px;
+      // right: 0;
+
+
+      @include screen-mq(md) {
+        width: 150%;
+        left: 50%;
+        // bottom: -10px;
+        transform: translate(-40%);
+      }
+
+      path {
+        fill: $cl1;
+      }
+    }
+  }
+
+  &-logo {
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 6%; 
+
+    @include screen-mq(md) {
+      width: 250px;
+      top: 120px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  &-text {
+    width: 30%;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+
+    @include screen-mq(md) {
+      // position: static;
+      // color: $cl1;
+      // display: inline-block;
+      background-color: rgba(#fff, .2);
+      bottom: 15%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+  }
+
+  &-scroll {
+    color: $cl2;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translate(-50%);
+
+    span {
+      // outline: 1px solid red;
+      position: absolute;
+      top: 10px;
+      left: 50%; 
+      width: 20px;
+      height: 20px;
+      margin-left: -12px;
+      border-left: 1px solid $cl2;
+      border-bottom: 1px solid $cl2;
+      transform: rotate(-45deg);
+      animation: sdb 1.5s infinite;
+      box-sizing: border-box;
+    }
+
+    
+    @keyframes sdb {
+      0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+      }
+    }
+    // @include screen-mq(md) {
+    //   color: $cl1;
+    //   font-weight: bold;
+    //   position: absolute;
+    //   bottom: 35%;
+    //   right: 10%;
+    // }
+  }
+}

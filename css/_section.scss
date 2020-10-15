@@ -1,0 +1,25 @@
+  @charset "UTF-8";
+
+
+
+.section {
+  $space-title: 300px; //sectionマージン
+  @include screen-mq(md) {
+    $space-title: 150px;
+    // outline: 1px solid red;
+  }
+  padding: $space-title 0;
+}
+
+.section-title {
+  font-size: $fz1;
+
+  @include screen-mq(md) {
+    font-size: $fzs1;
+  }
+}
+
+$space-content: 64px; //textマージントップ
+.section-text {
+  margin-top: $space-content;
+}
